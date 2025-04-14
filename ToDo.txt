@@ -22,3 +22,4 @@ Treasure Hunt
 
 Other nice to haves
 Number of visits per user (LIRAPP diehards)
+Thursday Write-ups / pictures
