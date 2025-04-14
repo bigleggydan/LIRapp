@@ -1,0 +1,24 @@
+Welcome Screen / Login
+Code of Conduct
+Diary of upcoming events
+  Monday run
+  Tuesday Jeffers
+  Thursday Social
+  Parkrun
+  Sunday Run
+       Times
+       Locations
+       Any other info.
+Kit ordering
+  Email Payment Details
+  Capture Orders and then not display
+  User can see what they've ordered
+  Pitures of available kit
+  Ability to close off when no orders are going in
+Treasure Hunt
+  Tick off list
+  Leaderboard
+  Archive
+
+Other nice to haves
+Number of visits per user (LIRAPP diehards)
