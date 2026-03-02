@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tickable Grid</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+    min-width: 100px;
+  }
+
+  th {
+    background-color: #f0f0f0;
+  }
+
+  #gridPage {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- WELCOME PAGE -->
+<div id="welcomePage">
+  <h2>Welcome!</h2>
+  <p>Please enter your name:</p>
+  <input type="text" id="nameInput" placeholder="Your name">
+  <button onclick="enterGrid()">Enter</button>
+</div>
+
+<!-- GRID PAGE -->
+<div id="gridPage">
+  <h2>Tickable Grid</h2>
+
+  <table id="gridTable">
+    <tr id="headerRow">
+      <th>Items</th>
+    </tr>
+
+    <tr>
+      <th>Item 1</th>
+    </tr>
+    <tr>
+      <th>Item 2</th>
+    </tr>
+    <tr>
+      <th>Item 3</th>
+    </tr>
+  </table>
+</div>
+
+<script>
+function enterGrid() {
+  const name = document.getElementById("nameInput").value.trim();
+  if (!name) {
+    alert("Please enter a name");
+    return;
+  }
+
+  document.getElementById("welcomePage").style.display = "none";
+  document.getElementById("gridPage").style.display = "block";
+
+  const table = document.getElementById("gridTable");
+  const headerRow = document.getElementById("headerRow");
+
+  // Create new column header
+  const th = document.createElement("th");
+  th.textContent = name;
+  headerRow.appendChild(th);
+
+  // Add checkbox to each item row
+  for (let i = 1; i < table.rows.length; i++) {
+    const td = document.createElement("td");
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    td.appendChild(checkbox);
+    table.rows[i].appendChild(td);
+  }
+}
+</script>
+
+</body>
+</html>
